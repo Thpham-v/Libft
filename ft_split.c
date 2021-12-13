@@ -6,13 +6,13 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 14:31:18 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 16:34:50 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:18:56 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_free_tab(char **tab, size_t nb_words)
+void	ft_free_tab(char **tab, size_t nb_words)
 {
 	while (nb_words >= 0)
 	{
@@ -23,7 +23,7 @@ void		ft_free_tab(char **tab, size_t nb_words)
 	tab = NULL;
 }
 
-size_t		ft_count_words(char const *s, char c)
+size_t	ft_count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -45,7 +45,7 @@ size_t		ft_count_words(char const *s, char c)
 	return (nb_words);
 }
 
-void		ft_create_tab(char const *s, char c, char **tab)
+void	ft_create_tab(char const *s, char c, char **tab)
 {
 	size_t	i;
 	size_t	j;
@@ -69,7 +69,7 @@ void		ft_create_tab(char const *s, char c, char **tab)
 	}
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	nb_words;
@@ -77,7 +77,8 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb_words = ft_count_words(s, c);
-	if (!(tab = malloc(sizeof(char *) * (nb_words + 1))))
+	tab = malloc(sizeof(char *) * (nb_words + 1));
+	if (tab == NULL)
 		return (NULL);
 	ft_create_tab(s, c, tab);
 	tab[nb_words] = NULL;

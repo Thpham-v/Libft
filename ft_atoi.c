@@ -6,13 +6,13 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 09:17:59 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 16:35:50 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:09:10 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	size_t	i;
 	int		res;

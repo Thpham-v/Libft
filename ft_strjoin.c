@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 09:28:12 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 17:19:26 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:21:47 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	alllen = s1len + s2len;
-	if (!(newstr = malloc(sizeof(char) * alllen + 1)))
+	newstr = malloc(sizeof(char) * alllen + 1);
+	if (newstr == NULL)
 		return (NULL);
 	ft_memcpy(newstr, s1, s1len);
 	ft_memcpy(&newstr[s1len], s2, s2len);

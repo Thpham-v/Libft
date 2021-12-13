@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:14:13 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 17:05:08 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:17:38 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (i < len)
 		{
 			if (dst > src)
-				((unsigned char *)dst)[len - i - 1] =
-				((unsigned char *)src)[len - i - 1];
+				((unsigned char *)dst)[len - i - 1]
+					= ((unsigned char *)src)[len - i - 1];
 			else
 				((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i++;

@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 15:19:19 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 18:04:27 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:23:02 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	if (!(newstr = malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	newstr = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (newstr == NULL)
 		return (NULL);
 	while (s[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 14:57:50 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/15 13:33:16 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:25:46 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start = (unsigned int)slen;
 	if (start + len > slen)
 		len = slen - start;
-	if (!(res = malloc(sizeof(char) * (len + 1))))
+	res = malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
 		return (NULL);
 	ft_memmove(res, s + start, len);
 	res[len] = '\0';

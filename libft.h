@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 09:25:37 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 16:21:36 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:26:55 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef	struct s_list	t_list;
+typedef struct s_list	t_list;
 struct		s_list
 {
 	void	*content;

@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 11:00:26 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/15 15:31:11 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:28:35 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	else if (s1)
 	{
 		start = 0;
-		if ((end = ft_strlen(s1)))
+		end = ft_strlen(s1);
+		if (end == ft_strlen(s1))
 			end--;
 		while (s1[start] && ft_strchr(set, s1[start]))
 			start++;

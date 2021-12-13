@@ -6,7 +6,7 @@
 /*   By: thpham-v <thpham-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 11:05:12 by thpham-v          #+#    #+#             */
-/*   Updated: 2021/01/14 18:16:06 by thpham-v         ###   ########.fr       */
+/*   Updated: 2021/12/13 05:15:21 by thpham-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	res = NULL;
 	while (lst)
 	{
-		if (!(new = ft_lstnew(f(lst->content))))
+		new = ft_lstnew(f(lst->content));
+		if (new == NULL)
 		{
 			ft_lstclear(&res, del);
 			return (NULL);
